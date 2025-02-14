@@ -18,11 +18,15 @@
         }
         .buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: relative;
         }
         .btn {
             font-size: 20px;
             padding: 10px 20px;
-            margin: 10px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
@@ -35,7 +39,8 @@
         .no {
             background-color: #f44336;
             color: white;
-            position: absolute;
+            transition: all 0.3s ease;
+            position: relative;
         }
         .hidden {
             display: none;
@@ -70,6 +75,7 @@
                 let button = document.getElementById("noButton");
                 let x = Math.random() * (window.innerWidth - 100);
                 let y = Math.random() * (window.innerHeight - 50);
+                button.style.position = "absolute";
                 button.style.left = x + "px";
                 button.style.top = y + "px";
                 button.innerText = noMessages[noClickCount] || "Just say yes!";
