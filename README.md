@@ -1,4 +1,3 @@
-# Create an HTML file with the Valentine's website code
 html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
